@@ -4,8 +4,6 @@
 using namespace std;
 
 // ================== GENERADOR PSEUDOALEATORIO PROPIO ==================
-// Reemplaza a rand()/srand() de <cstdlib> con un LCG (Linear Congruential
-// Generator) sencillo, sembrado con time(nullptr) de <ctime>.
 
 unsigned long semillaGlobal;
 
@@ -22,7 +20,6 @@ int siguienteAleatorio(int minR, int maxR)
 }
 
 // ================== UTILIDADES DE IMPRESION ==================
-// Reemplazan a setw/fixed/setprecision de <iomanip>.
 
 void imprimirPad(const string &texto, int ancho)
 {
@@ -250,7 +247,6 @@ void countingSort(int A[], int n)
 }
 
 // ================== MEDICION DE TIEMPO ==================
-// clock() de <ctime> mide tiempo de CPU consumido por el proceso.
 
 double medirTiempoBubble(int *A, int n)      { clock_t t0 = clock(); bubbleSort(A, n); return (double)(clock() - t0) * 1000.0 / CLOCKS_PER_SEC; }
 double medirTiempoInsertion(int *A, int n)   { clock_t t0 = clock(); insertionSort(A, n); return (double)(clock() - t0) * 1000.0 / CLOCKS_PER_SEC; }
